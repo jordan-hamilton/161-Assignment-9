@@ -7,12 +7,12 @@ int main() {
 
   board1.makeMove(0,0,'o');
   board1.makeMove(0,1,'x');
-  board1.makeMove(0,2,'x');
-  board1.makeMove(1,0,'o');
-  board1.makeMove(1,1,'x');
+  board1.makeMove(0,2,'o');
+  board1.makeMove(1,0,'x');
+  board1.makeMove(1,1,'o');
   board1.makeMove(1,2,'x');
   board1.makeMove(2,0,'x');
-  board1.makeMove(2,1,'x');
+  board1.makeMove(2,1,'o');
   board1.makeMove(2,2,'o');
 
   board1.print();
@@ -29,6 +29,6 @@ int main() {
     case 3: std::cout << "It's not over!" << std::endl;
             break;
   }
-  
+
   return 0;
 }
