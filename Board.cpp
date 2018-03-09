@@ -2,7 +2,9 @@
  ** Author: Jordan Hamilton
  ** Date: 03/06/2018
  ** Description: This implements a class that represents a tic-tac-toe
- ** board.
+ ** board. Its data member is a 3x3 char array. Methods set characters
+ ** on the board, return the game's state, and print a visualization
+ ** of the array.
  *********************************************************************/
 
 #include <iostream>
@@ -24,6 +26,7 @@ Board::Board() {
 
 }
 
+
 /*********************************************************************
 ** Description: Set the provided location on the board equal to the
 ** char passed to the function and return true, only if we detect a
@@ -43,7 +46,7 @@ bool Board::makeMove(int xCoordinate, int yCoordinate, char player) {
 
 /*********************************************************************
 ** Description: Find and return the game's current state by checking
-** for a  multiple of the ASCII code for 'x' or 'o' in a row, column
+** for a multiple of the ASCII code for 'x' or 'o' in a row, column
 ** or diagonal. Return a draw if the board is full without a winner,
 ** or unfinished if there isn't a winner and the board isn't full.
 *********************************************************************/
@@ -112,8 +115,8 @@ State Board::gameState() {
       gameState = DRAW;
     }
 
-    // Return either a draw if we were able to determine one,
-    // or the game is unfinished.
+    // Return a draw if we were able to determine one,
+    // or return that the game is unfinished.
     return gameState;
 
   }

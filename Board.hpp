@@ -4,6 +4,9 @@
  ** Description: Specification file for the Board class.
  *********************************************************************/
 
+#ifndef BOARD_HPP
+#define BOARD_HPP
+
 
 enum State { X_WON, O_WON, DRAW, UNFINISHED };
 
@@ -17,4 +20,8 @@ class Board {
     bool makeMove(int xCoordinate, int yCoordinate, char player);
     State gameState();
     void print();
+
 };
+
+
+#endif
